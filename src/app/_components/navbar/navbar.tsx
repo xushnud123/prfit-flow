@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { Add, Payment, Transaction } from "../icons";
 import Link from "next/link";
 import cn from "@/lib/cn";
-import Hamburger from "hamburger-react";
 import { usePathname } from "next/navigation";
+import { MenuToggle } from "./toggle";
 
 const routerData = [
   {
@@ -74,10 +74,14 @@ const Navbar = () => {
           Profit Flow
         </button>
 
-        <Hamburger
-          toggled={burgerMenuActive}
-          toggle={() => setBurgerMenuActive(!burgerMenuActive)}
-        />
+        <motion.nav
+          initial={false}
+          animate={burgerMenuActive ? "open" : "closed"}
+          custom='100%'
+        >
+          {" "}
+          <MenuToggle toggle={() => setBurgerMenuActive(!burgerMenuActive)} />
+        </motion.nav>
       </div>
       <div
         className={cn(
