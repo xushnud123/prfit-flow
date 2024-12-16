@@ -10,7 +10,7 @@ const useConversions = () => {
     queryKey: ["CONVERSION"],
     queryFn: async () => {
       const res = await axios.get(
-        "https://v6.exchangerate-api.com/v6/1b587f9a7f7efaff1efdda84/latest/USD"
+        "https://v6.exchangerate-api.com/v6/dd057200142d6026e63caa4d/latest/USD"
       );
       const data = ConversionMappers(res.data);
       return data;
