@@ -56,7 +56,7 @@ const TransactionsTable: FC<TransactionsTableProps> = ({}) => {
   }, []);
 
   return (
-    <div className='block mt-8'>
+    <div className='block mt-10'>
       <div className='flex justify-between items-center'>
         <h1 className='text-2xl text-white'>Transactions</h1>
         <Link

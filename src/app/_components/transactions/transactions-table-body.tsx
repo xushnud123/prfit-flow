@@ -92,7 +92,7 @@ const TransactionsTableBody: FC<TransactionsTableBodyProps> = ({
           </div>
         </motion.div>
         <motion.div
-          className='mt-3'
+          className='mt-3 h-[265px] overflow-y-auto'
           variants={containerVariants}
           initial='hidden'
           animate='visible'

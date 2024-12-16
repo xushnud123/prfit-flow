@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Transaction Management va Currency Conversion Dasturi
 
-## Getting Started
+Ushbu loyiha **Next.js** va **React** yordamida yaratildi, va **Tailwind CSS** Bootstrap o'rniga stilizatsiya uchun ishlatilgan. Ushbu loyihaning maqsadi - tranzaksiyalarni boshqarish (qo'shish, o'chirish va kirim-chiqimlarni grafiklar orqali ko'rsatish) va valyutalar konvertatsiyasini amalga oshirish.
 
-First, run the development server:
+## Tavsif
+
+Ushbu loyiha foydalanuvchilarga moliyaviy tranzaksiyalarni boshqarishda yordam beradi. Foydalanuvchilar quyidagi imkoniyatlardan foydalanishi mumkin:
+
+1. **Tranzaksiyalarni Boshqarish**: Kiritish, o'chirish va tranzaksiyalarni ko'rish (kirimlar va chiqimlar).
+2. **Grafiklar Orqali Tranzaksiyalarni Ko'rish**: Kirimlar va chiqimlarni interaktiv grafiklar orqali tasvirlash.
+3. **Valyuta Konvertatsiyasi**: Turli valyutalar o'rtasida kurslarni ko'rish va mablag'larni konvertatsiya qilish.
+
+## Foydalanilgan Texnologiyalar
+
+- **Frontend**: React, Next.js, Tailwind CSS
+- **Grafiklar**: Recharts (kirim/chiqim grafiklari uchun)
+- **Holat Boshqaruvi**: [Zustand](https://github.com/pmndrs/zustand) yordamida holat boshqaruvi
+- **Valyuta API**: [ExchangeRate-API](https://v6.exchangerate-api.com/v6/dd057200142d6026e63caa4d/latest/USD) orqali valyuta kurslarini olish
+- **API So'rovlar**: [Axios](https://axios-http.com/) va [React Query](https://react-query.tanstack.com/) orqali ma'lumotlarni olish
+- **Autentifikatsiya**: Autentifikatsiya yo'q (foydalanuvchi kirish/ro'yxatdan o'tish talab qilinmaydi)
+
+## Xususiyatlar
+
+- **Tranzaksiyalarni Boshqarish**: Kirim/chiqim yozuvlarini qo'shish, tahrirlash va o'chirish
+- **Interaktiv Grafiklar**: Kirim va chiqimlarni Recharts orqali tasvirlash
+- **Valyuta Konvertatsiyasi**: Mablag'larni turli valyutalar o'rtasida konvertatsiya qilish
+- **Moslashuvchan Dizayn**: Tailwind CSS yordamida to'liq moslashuvchan dizayn
+- **Zustand** yordamida holat boshqaruvi
+- **Axios** va **React Query** orqali API so'rovlarini amalga oshirish
+
+## Loyihani O'rnatish
+
+Ushbu loyihani o'z kompyuteringizda ishga tushirish uchun quyidagi qadamlarni bajarish lozim:
+
+### 1. Repozitoriyani Klonlash
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/xushnud123/profit-flow.git
+cd profit-flow
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# [Profit Flow link](https://profit-flow-zzxm.vercel.app/)
