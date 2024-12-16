@@ -1,5 +1,5 @@
 "use client";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode, Suspense, useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import NextAdapterApp from "next-query-params/app";
@@ -29,25 +29,27 @@ const Provider: FC<ProviderProps> = ({ children }) => {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <QueryParamProvider adapter={NextAdapterApp}>
-          {loading ? (
-            <Loader />
-          ) : (
-            <div className='w-screen h-screen'>
-              {innerWidth < 900 && <Navbar />}
-              <Main
-                body={
-                  <div className='flex flex-col gap-5 h-full'>{children}</div>
-                }
-                sidebar={
-                  <div className='flex flex-col gap-5 h-full'>
-                    {<Sidebar />}
-                  </div>
-                }
-              />
-            </div>
-          )}
-        </QueryParamProvider>
+        <Suspense fallback={<Loader />}>
+          <QueryParamProvider adapter={NextAdapterApp}>
+            {loading ? (
+              <Loader />
+            ) : (
+              <div className='w-screen h-screen'>
+                {innerWidth < 900 && <Navbar />}
+                <Main
+                  body={
+                    <div className='flex flex-col gap-5 h-full'>{children}</div>
+                  }
+                  sidebar={
+                    <div className='flex flex-col gap-5 h-full'>
+                      {<Sidebar />}
+                    </div>
+                  }
+                />
+              </div>
+            )}
+          </QueryParamProvider>
+        </Suspense>
       </QueryClientProvider>
     </>
   );
